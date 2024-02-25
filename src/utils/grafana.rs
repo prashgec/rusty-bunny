@@ -3,7 +3,7 @@ use crate::utils::get_service_name;
 
 use percent_encoding::{utf8_percent_encode, AsciiSet, CONTROLS};
 
-// Used as part of the percent_encoding library
+// Used as part of the percent_encoding library added comment
 const FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'"').add(b'<').add(b'>').add(b'`');
 
 pub fn construct_grafana_url(query: &str) -> String {
