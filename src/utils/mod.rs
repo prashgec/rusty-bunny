@@ -15,12 +15,7 @@ pub fn get_command_from_query_string(query_string: &str) -> &str {
 
 pub fn get_service_name(code: &str) -> &str {
     match code {
-        "tb" => "transaction-block-manager",
-        "papi" => "acquiring-payments-api",
-        "tba" => "transaction-block-aux",
-        "fx" => "acceptance-fx-api",
-        "bin" => "acceptance-bin-service",
-"tbj" => "transaction-block-janitor",
+        "as" => "asd"
         _ => "",
     }
 }
