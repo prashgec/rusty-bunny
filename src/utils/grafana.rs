@@ -8,12 +8,12 @@ const FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'"').add(b'<').add(b'>').ad
 
 pub fn construct_grafana_url(query: &str) -> String {
     if query == "gf" {
-        "https://o11y-frontend-grafana.platform-dev.eu-west-1.salt/".to_string()
+        "dummy/".to_string()
     } else {
         // Assume the other match is "gh page"
         let env = utf8_percent_encode(&query[3..], FRAGMENT).to_string();
         let service = utf8_percent_encode(&query[7..], FRAGMENT).to_string();
-        let grafana = format!("https://o11y-frontend-grafana.platform-{}.eu-west-1.salt/dashboards/?tag={}", env, get_service_name(&service));
+        let grafana = format!("dummy={}", env, get_service_name(&service));
         // print!("{}",grafana);
         grafana
     }
